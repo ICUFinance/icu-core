@@ -1,0 +1,39 @@
+{
+  "name": "icu",
+  "version": "0.1.0",
+  "description": "Icu Core",
+  "license": "MIT",
+  "scripts": {
+    "build:ts": "yarn run tsc",
+    "build:sc": "npx hardhat compile --force",
+
+    "deployIcu": "HARDHAT_NETWORK=bsc ts-node ./scripts/deployIcu.ts",
+    "deployMiningPools": "HARDHAT_NETWORK=bsc ts-node ./scripts/deployMiningPools.ts",
+
+    "setWhitelist": "HARDHAT_NETWORK=bsc ts-node ./scripts/setWhitelist.ts",
+
+    "disapprove": "HARDHAT_NETWORK=bsc ts-node ./scripts/disapprove.ts"
+
+
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.4.1",
+    "sqlite3": "^5.0.2",
+    "typeorm": "^0.2.31",
+    "csv-parse": "^4.15.3"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@types/chai": "^4.2.15",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^14.14.35",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.3.0",
+    "ethers": "^5.0.32",
+    "hardhat": "^2.1.2",
+    "mocha": "^8.3.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}
